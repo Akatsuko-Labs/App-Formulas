@@ -3,13 +3,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: '',
+    redirectTo: 'pantalla-formulas',
+    pathMatch: 'full'
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'pantalla-formulas',
+    loadChildren: () => import('./pantalla-formulas/pantalla-formulas.module').then( m => m.PantallaFormulasPageModule)
+  },
+  {
+    path: 'ejercicioctc',
+    loadChildren: () => import('./ejercicios/ejercicioctc/ejercicioctc.module').then( m => m.EjercicioctcPageModule)
   },
 ];
 

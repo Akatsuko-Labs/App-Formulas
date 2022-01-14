@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App Formulas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label *ngFor="let ejercicio of lista" (click)="navegarHacia(ejercicio.ruta)">{{ ejercicio.nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
