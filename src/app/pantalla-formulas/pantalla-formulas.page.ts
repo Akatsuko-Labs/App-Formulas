@@ -18,6 +18,10 @@ export class PantallaFormulasPage implements OnInit {
     {
       ruta: "monedas",
       nombre: "Conversion monedas"
+    },
+    {
+      ruta:"ejerciciocifras",
+      nombre: "Ejercicio Cifras"
     }
   ]
 

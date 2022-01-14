@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'monedas',
     loadChildren: () => import('./ejercicios/monedas/monedas.module').then( m => m.MonedasPageModule)
   },
+  {
+    path: 'ejerciciocifras',
+    loadChildren: () => import('./ejercicios/ejerciciocifras/ejerciciocifras.module').then( m => m.EjerciciocifrasPageModule)
+  },
 ];
 
 @NgModule({
