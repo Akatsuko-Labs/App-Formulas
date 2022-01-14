@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Formulas",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
