@@ -13,6 +13,11 @@ export class PantallaFormulasPage implements OnInit {
     {
       ruta: "ejercicioctc",
       nombre: "Ejercicio: Circulo, Triangulo y Cuadrado"
+      
+    },
+    {
+      ruta: "monedas",
+      nombre: "Conversion monedas"
     }
   ]
 

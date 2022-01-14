@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'ejercicioctc',
     loadChildren: () => import('./ejercicios/ejercicioctc/ejercicioctc.module').then( m => m.EjercicioctcPageModule)
   },
+  {
+    path: 'monedas',
+    loadChildren: () => import('./ejercicios/monedas/monedas.module').then( m => m.MonedasPageModule)
+  },
 ];
 
 @NgModule({

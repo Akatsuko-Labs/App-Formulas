@@ -6,8 +6,8 @@
 
 <ion-content>
   <ion-list>
-    <ion-item>
-      <ion-label *ngFor="let ejercicio of lista" (click)="navegarHacia(ejercicio.ruta)">{{ ejercicio.nombre }}</ion-label>
+    <ion-item *ngFor="let ejercicio of lista">
+      <ion-label (click)="navegarHacia(ejercicio.ruta)">{{ ejercicio.nombre }}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
