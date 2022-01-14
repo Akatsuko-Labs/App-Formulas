@@ -1,9 +1,57 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>monedas</ion-title>
+    <ion-title>Conversion de monedas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <p style="margin: 20px">Aplicacion de conversion de monedas(pesos a dolares y viceversa)</p>
+
+  <br>
+  <br>
+  <br>
+
+  <ion-item>
+    <ion-label>Elige la conversion</ion-label>
+    <ion-select (ionChange)="cambiarFormula($event)">
+      <ion-select-option value="PESOS">Pesos a dolares</ion-select-option>
+      <ion-select-option value="DOLARES">Dolares a pesos</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <br>
+  <br>
+
+
+  <form [formGroup]="conv" *ngIf="formula == 'PESOS'" style="margin: 30px; border: 1px solid rgb(2, 255, 192);">
+    <ion-item lines="full">
+      <ion-label position="floating">Introduce la cantidad en pesos</ion-label>
+      <ion-input formControlName="pesosad" type="number" required></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12" class="ion-text-center">
+          <ion-button (click)="calcularPesosad()" color="success">Calcular a dolares</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <form [formGroup]="conv" *ngIf="formula == 'DOLARES'" style="margin: 30px; border: 1px rgb(2, 255, 192);">
+    <ion-item lines="full">
+      <ion-label position="floating">Introduce la cantidad en dolares</ion-label>
+      <ion-input formControlName="dolarpe" type="number" required></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12" class="ion-text-center">
+          <ion-button (click)="calcularDolaresap()" color="success">Calcular a pesos</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+
+  <h2 *ngIf="resuelto" style="margin-left: 20px">Resultado: {{conversion}} </h2>
 
 </ion-content>
